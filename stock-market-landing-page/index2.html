@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India's #1 Trading Channel | Stop Guessing, Start Earning!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;700&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Fonts */
+      body {
+        font-family: 'Inter', sans-serif;
+        --tw-bg-opacity: 1;
+        background-color: rgb(15 23 42 / var(--tw-bg-opacity)); /* bg-slate-900 */
+      }
+      .font-poppins { font-family: 'Poppins', sans-serif; }
+      .font-roboto-mono { font-family: 'Roboto Mono', monospace; }
+
+      /* Base Animation for Reveal on Scroll */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1), transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1);
+      }
+      .reveal-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-on-scroll.delay-1 { transition-delay: 100ms; }
+      .reveal-on-scroll.delay-2 { transition-delay: 200ms; }
+      .reveal-on-scroll.delay-3 { transition-delay: 300ms; }
+      .reveal-on-scroll.delay-4 { transition-delay: 400ms; }
+
+      /* NEW CTA Button Animation - Upgraded with scale */
+      .cta-button {
+        background: linear-gradient(90deg, #10b981, #22d3ee, #38bdf8, #10b981);
+        background-size: 200% 100%;
+        animation: bg-pan 4s linear infinite, pulse-scale-glow 2.5s infinite ease-in-out;
+        border: none;
+        position: relative;
+        z-index: 1;
+      }
+      @keyframes bg-pan {
+        0% { background-position: 150% 0; }
+        100% { background-position: -150% 0; }
+      }
+      @keyframes pulse-scale-glow {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 8px #10b981, 0 0 12px #22d3ee;
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 16px #22d3ee, 0 0 24px #38bdf8;
+        }
+      }
+
+      /* Typing Animation */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #f59e0b; }
+      }
+      .typing-effect {
+        overflow: hidden;
+        border-right: .15em solid #f59e0b;
+        white-space: nowrap;
+        animation: typing 2.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
+      }
+
+      /* Gentle Pulse for Sticky & Floating CTAs */
+      @keyframes soft-pulse {
+        0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+        50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+      }
+      .animate-soft-pulse {
+        animation: soft-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+
+      /* Countdown Timer Last Minute Glow */
+      @keyframes pulse-red-glow {
+        0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
+        50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.8); }
+      }
+      .last-minute-glow { animation: pulse-red-glow 1.5s infinite ease-in-out; }
+
+      /* Social Proof Popup Animation */
+      @keyframes slide-in-out {
+        0% { opacity: 0; transform: translateX(-100%); }
+        15%, 85% { opacity: 1; transform: translateX(0); }
+        100% { opacity: 0; transform: translateX(-100%); }
+      }
+      .animate-slide-in-out { animation: slide-in-out 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; }
+
+      /* Floating Icon Bounce */
+      @keyframes bounce-float {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-15px) scale(1.05); }
+      }
+      .animate-bounce-float {
+        animation: bounce-float 3s infinite ease-in-out;
+      }
+      
+      /* Hero Icon Float */
+      @keyframes float-hero-icon {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      .animate-float-hero-icon {
+        animation: float-hero-icon 3s ease-in-out infinite;
+      }
+
+      /* Mobile Swipe Arrow */
+      @keyframes swipe-up {
+        0%, 100% { transform: translateY(0); opacity: 1; }
+        50% { transform: translateY(-8px); opacity: 0.5; }
+      }
+      .animate-swipe-up { animation: swipe-up 1.5s infinite ease-in-out; }
+
+      html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-100 antialiased overflow-x-hidden">
+
+    <!-- Social Proof Popup -->
+    <div id="social-proof-popup" class="hidden fixed bottom-24 md:bottom-8 left-4 md:left-8 bg-slate-800/80 backdrop-blur-md border border-emerald-500/50 text-white p-3 rounded-lg shadow-2xl z-50">
+      <p id="social-proof-text" class="text-sm md:text-base font-semibold"></p>
+    </div>
+
+    <main class="relative z-10">
+      <!-- Hero Section -->
+      <section class="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden p-4 md:p-8">
+        <div class="absolute inset-0 bg-slate-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.2),rgba(255,255,255,0))]"></div>
+        <div class="absolute inset-0 bg-grid-slate-800 [mask-image:linear-gradient(to_bottom,white_0%,white_75%,transparent_100%)] opacity-50"></div>
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+          <div class="w-36 h-36 mb-6 flex items-center justify-center animate-float-hero-icon">
+             <div class="relative w-full h-full flex items-center justify-center">
+                <svg class="absolute w-full h-full text-emerald-500/30" fill="currentColor" viewBox="0 0 200 200">
+                    <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
+                </svg>
+                <div class="relative text-center text-white bg-slate-800 rounded-full p-4 border-2 border-emerald-400">
+                    <p class="font-extrabold text-2xl font-poppins text-emerald-400">50K+</p>
+                    <p class="text-xs font-bold uppercase tracking-wider">Happy Members</p>
+                </div>
+            </div>
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-300 to-sky-400 mb-4 font-poppins">
+            Stop Guessing.<br/>Start Earning with <span id="typing-container" class="text-amber-400"><span id="typing-text"></span></span>
+          </h1>
+          <p class="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8">
+            Join India's #1 Free Trading Channel. Get <strong>98% accurate signals</strong> and make your first profit, maybe even today!
+          </p>
+          <a href="https://t.me/YOURCHANNEL" id="main-cta" target="_blank" rel="noopener noreferrer" class="cta-button inline-flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white rounded-full px-8 py-4 shadow-2xl transform transition-transform duration-300 active:scale-95">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z" /></svg>
+              ✅ Yes, I Want FREE Signals!
+          </a>
+        </div>
+      </section>
+      
+      <!-- FOMO Bar -->
+      <div class="bg-gradient-to-r from-amber-500 via-red-500 to-amber-500 py-2.5 px-4 text-center text-white font-bold text-sm md:text-base sticky top-0 z-30 shadow-lg">
+        <p>🔥 ATTENTION INSTAGRAM USERS: FREE Lifetime Access is closing fast! Only <span id="spots-left" class="font-extrabold text-white text-base md:text-lg">23</span> spots left for today!</p>
+      </div>
+
+      <!-- Value Stack Section -->
+      <section class="py-20 px-4 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4 font-poppins reveal-on-scroll">What You Get Inside <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">(Absolutely FREE!)</span></h2>
+          <p class="text-center text-slate-400 mb-12 text-lg reveal-on-scroll delay-1">We give you everything you need to succeed. No charges, no hidden fees.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div class="group bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 reveal-on-scroll delay-1">
+              <div class="bg-emerald-500/10 text-emerald-400 w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-poppins">🎓 Free Beginner Courses</h3>
+              <p class="text-slate-400">Easy video lessons to learn trading from zero. (Value: ₹15,000)</p>
+            </div>
+            <!-- Card 2 -->
+             <div class="group bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 reveal-on-scroll delay-2">
+                <div class="bg-emerald-500/10 text-emerald-400 w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-poppins">🚀 Daily Profit Calls</h3>
+              <p class="text-slate-400">3-5 daily signals with clear Entry, Target, and Stoploss.</p>
+            </div>
+            <!-- Card 3 -->
+             <div class="group bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 reveal-on-scroll delay-3">
+                <div class="bg-emerald-500/10 text-emerald-400 w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6H9" />
+                    </svg>
+                </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-poppins">💸 Jackpot Option Calls</h3>
+              <p class="text-slate-400">Special calls for F&O traders to make big profits.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="group bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10 reveal-on-scroll delay-4">
+                <div class="bg-emerald-500/10 text-emerald-400 w-16 h-16 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /></svg>
+                </div>
+              <h3 class="text-xl font-bold text-white mb-2 font-poppins">🔔 Live Expert Help</h3>
+              <p class="text-slate-400">Ask any question during market hours and get instant answers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOMO Countdown Section -->
+      <section class="py-20 px-4 text-center bg-gradient-to-b from-slate-900 to-gray-900">
+        <div class="max-w-3xl mx-auto reveal-on-scroll">
+          <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-4 font-poppins">
+            Your FREE Lifetime Access Ends In...
+          </h2>
+          <p class="text-slate-300 text-lg mb-8">
+            Don't miss out. This special offer for our Instagram followers is only for today. Once it's gone, it's gone forever!
+          </p>
+          <div id="countdown-timer" class="flex justify-center items-center space-x-2 md:space-x-4 transition-all duration-500">
+            <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24"><span id="days" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span><span class="text-sm text-slate-400 block">Days</span></div>
+            <span class="text-4xl font-bold text-slate-600">:</span>
+            <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24"><span id="hours" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span><span class="text-sm text-slate-400 block">Hours</span></div>
+            <span class="text-4xl font-bold text-slate-600">:</span>
+            <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24"><span id="minutes" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span><span class="text-sm text-slate-400 block">Mins</span></div>
+            <span class="text-4xl font-bold text-slate-600">:</span>
+            <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24"><span id="seconds" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span><span class="text-sm text-slate-400 block">Secs</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Proof Section -->
+      <section class="py-20 px-4 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 font-poppins reveal-on-scroll">Real People, Real Profits. You Could Be Next.</h2>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16 reveal-on-scroll">
+            <div><p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">50K+</p><p class="text-slate-400">Happy Traders</p></div>
+            <div><p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">₹5 Crore+</p><p class="text-slate-400">Member Profits</p></div>
+            <div><p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">98%</p><p class="text-slate-400">Signal Accuracy</p></div>
+            <div><p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">4.9 ⭐</p><p class="text-slate-400">Average Rating</p></div>
+          </div>
+
+          <div class="mb-16 reveal-on-scroll">
+              <h3 class="text-2xl font-bold text-center text-white mb-6 font-poppins">Real Profit Screenshots from Our Members</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                  <img src="https://picsum.photos/seed/profit1/600/400" alt="Successful trade screenshot" class="rounded-lg shadow-2xl border-2 border-slate-700 hover:scale-105 transition-transform duration-300"/>
+                  <img src="https://picsum.photos/seed/profit2/600/400" alt="Another successful trade screenshot" class="rounded-lg shadow-2xl border-2 border-slate-700 hover:scale-105 transition-transform duration-300"/>
+              </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700/50 reveal-on-scroll delay-1"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Rohan Sharma" class="w-12 h-12 rounded-full mr-4 border-2 border-emerald-400" /><div><p class="font-bold text-white">Rohan Sharma</p><p class="text-sm text-sky-400">From Mumbai ✅</p></div></div><p class="text-slate-300 italic">“I recovered all my past losses in just one month with their calls. It feels like magic. Best decision ever!”</p></div>
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700/50 reveal-on-scroll delay-2"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?u=a042581f4e29026705d" alt="Priya Mehta" class="w-12 h-12 rounded-full mr-4 border-2 border-emerald-400" /><div><p class="font-bold text-white">Priya Mehta</p><p class="text-sm text-sky-400">From Delhi ✅</p></div></div><p class="text-slate-300 italic">“I knew nothing about trading. Their free course made it so easy. I earned ₹2,500 on my first trade! Thank you so much.”</p></div>
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700/50 reveal-on-scroll delay-3"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?u=a042581f4e29026706d" alt="Karan Singh" class="w-12 h-12 rounded-full mr-4 border-2 border-emerald-400" /><div><p class="font-bold text-white">Karan Singh</p><p class="text-sm text-sky-400">From Bangalore ✅</p></div></div><p class="text-slate-300 italic">“I joined from an Instagram ad, and I was doubtful. But this channel is 100% genuine. The signals are super accurate.”</p></div>
+          </div>
+          
+          <div class="text-center mt-16 reveal-on-scroll">
+            <a href="https://t.me/YOURCHANNEL" id="final-cta" target="_blank" rel="noopener noreferrer" class="cta-button inline-flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white rounded-full px-10 py-5 shadow-2xl transform transition-transform duration-300 active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                ✅ Join FREE & Start Earning Now!
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Telegram Icon -->
+    <a href="https://t.me/YOURCHANNEL" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center shadow-2xl animate-bounce-float">
+        <svg viewBox="0 0 24 24" fill="white" class="w-9 h-9"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z" /></svg>
+    </a>
+
+    <!-- Sticky CTA -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 p-3 bg-slate-900/80 backdrop-blur-lg border-t border-slate-700 z-40 transform translate-y-full transition-transform duration-500 ease-in-out">
+      <a href="https://t.me/YOURCHANNEL" target="_blank" rel="noopener noreferrer" id="sticky-cta-link" class="w-full flex items-center justify-center gap-3 text-lg font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full px-6 py-3 shadow-lg transform transition-all duration-300 active:scale-95">
+          <span class="md:hidden animate-swipe-up">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+            </svg>
+          </span>
+          <span id="sticky-cta-text">Join FREE & Get Next Jackpot Call 🔥</span>
+      </a>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- Typing Animation ---
+    const typingElement = document.getElementById('typing-text');
+    const words = ["Profit Calls", "Stock Signals", "Free Learning", "Daily Earnings"];
+    let wordIndex = 0, charIndex = 0, isDeleting = false;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        let displayText = isDeleting ? currentWord.substring(0, charIndex - 1) : currentWord.substring(0, charIndex + 1);
+        charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+        
+        typingElement.textContent = displayText;
+        typingElement.classList.add('typing-effect');
+        
+        let typeSpeed = isDeleting ? 60 : 120;
+        if (!isDeleting && charIndex === currentWord.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
+        }
+        setTimeout(type, typeSpeed);
+    }
+    
+    // --- Countdown Timer ---
+    const targetDate = new Date();
+    targetDate.setHours(targetDate.getHours() + 8); // Set timer for 8 hours from now
+    const countdownTimerEl = document.getElementById('countdown-timer');
+    const daysEl = document.getElementById('days'), hoursEl = document.getElementById('hours'), minutesEl = document.getElementById('minutes'), secondsEl = document.getElementById('seconds');
+    const secondsContainer = secondsEl.parentElement;
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate.getTime() - now;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            countdownTimerEl.innerHTML = '<p class="text-2xl font-bold text-red-500">Offer Expired!</p>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const formatTime = (time) => time < 10 ? '0' + time : time;
+        
+        daysEl.textContent = formatTime(days);
+        hoursEl.textContent = formatTime(hours);
+        minutesEl.textContent = formatTime(minutes);
+        secondsEl.textContent = formatTime(seconds);
+
+        if(distance < 60000) { // Last minute
+            countdownTimerEl.classList.add('last-minute-glow');
+            secondsContainer.classList.add('animate-pulse');
+            secondsEl.classList.add('text-red-500');
+        }
+    }
+
+    // --- Sticky CTA Logic ---
+    const stickyCTA = document.getElementById('sticky-cta');
+    const stickyCtaLink = document.getElementById('sticky-cta-link');
+    let ctaPulseInterval;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            stickyCTA.classList.remove('translate-y-full');
+            if (!ctaPulseInterval) {
+                ctaPulseInterval = setInterval(() => {
+                    stickyCtaLink.classList.add('animate-soft-pulse');
+                    setTimeout(() => stickyCtaLink.classList.remove('animate-soft-pulse'), 2000);
+                }, 7000);
+            }
+        } else {
+            stickyCTA.classList.add('translate-y-full');
+            clearInterval(ctaPulseInterval);
+            ctaPulseInterval = null;
+        }
+    });
+
+    // --- Social Proof Popup ---
+    const socialProofPopup = document.getElementById('social-proof-popup');
+    const socialProofText = document.getElementById('social-proof-text');
+    const names = ["Rohan", "Priya", "Amit", "Sneha", "Vikram", "Anjali", "Deepak", "Pooja"];
+    const cities = ["Mumbai", "Delhi", "Bangalore", "Pune", "Kolkata", "Hyderabad", "Ahmedabad", "Jaipur"];
+
+    function showSocialProof() {
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        const randomCity = cities[Math.floor(Math.random() * cities.length)];
+        socialProofText.innerHTML = `🔥 <strong>${randomName}</strong> from ${randomCity} just joined!`;
+        
+        socialProofPopup.classList.remove('hidden', 'animate-slide-in-out');
+        void socialProofPopup.offsetWidth; // Trigger reflow
+        socialProofPopup.classList.add('animate-slide-in-out');
+    }
+    
+    // --- Dynamic Spots Left Counter ---
+    const spotsLeftEl = document.getElementById('spots-left');
+    if (spotsLeftEl) {
+        let spots = 23;
+        spotsLeftEl.textContent = spots;
+        const spotsInterval = setInterval(() => {
+            if (spots > 5) {
+                spots--;
+                spotsLeftEl.textContent = spots;
+            } else {
+                clearInterval(spotsInterval);
+                spotsLeftEl.textContent = "a few";
+                spotsLeftEl.parentElement.classList.add('animate-pulse', 'text-red-300');
+            }
+        }, 35000); // Decrease every 35 seconds
+    }
+    
+    // --- Scroll Animations ---
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+    // --- Initial and interval calls ---
+    setTimeout(type, 1000);
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+    setTimeout(() => {
+        showSocialProof();
+        setInterval(showSocialProof, 8000);
+    }, 4000);
+});
+</script>
+</body>
+</html>
