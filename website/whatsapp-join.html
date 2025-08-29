@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🚀 BADSHAH BROKING! Join India's #1 VIP Telegram Channel for Stock Market Signals!</title>
+  <title>🚀 BADSHAH BROKING! Join India's #1 VIP WhatsApp Group for Stock Market Signals!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,7 +12,6 @@
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom Fonts */
     body {
       font-family: 'Inter', sans-serif;
     }
@@ -25,66 +24,38 @@
       font-family: 'Roboto Mono', monospace;
     }
 
-    /* Custom Animations */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* WhatsApp Colors */
+    .wp-gradient {
+      background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+    }
+
+    .wp-btn {
+      background: linear-gradient(90deg, #128C7E 0%, #25D366 100%);
+    }
+
+    .wp-shadow {
+      box-shadow: 0 2px 16px rgba(37, 211, 102, 0.16);
+    }
+
     @keyframes pulse-glow {
 
       0%,
       100% {
-        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6), 0 0 30px rgba(14, 165, 233, 0.5);
-        transform: scale(1);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.5), 0 0 30px rgba(18, 140, 126, 0.4);
       }
 
       50% {
-        box-shadow: 0 0 25px rgba(34, 197, 94, 1), 0 0 50px rgba(14, 165, 233, 0.8);
-        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(37, 211, 102, 1), 0 0 50px rgba(18, 140, 126, 0.7);
       }
     }
 
     .animate-pulse-glow {
       animation: pulse-glow 2.5s infinite ease-in-out;
     }
-
-    @keyframes typing {
-      from {
-        width: 0
-      }
-
-      to {
-        width: 100%
-      }
-    }
-
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent
-      }
-
-      50% {
-        border-color: #f59e0b;
-      }
-    }
-
-    .typing-effect {
-      overflow: hidden;
-      border-right: .15em solid #f59e0b;
-      white-space: nowrap;
-      animation: typing 2.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
-    }
-
-    /* Ensure cursor is visible during typing */
-    .typing-effect.typing::after {
-      content: "|";
-      display: inline-block;
-      animation: blink-caret .75s step-end infinite;
-      vertical-align: middle;
-      margin-left: 5px;
-      color: #f59e0b;
-      font-size: 1.2em;
-      line-height: 1;
-    }
-
 
     @keyframes shake {
 
@@ -110,7 +81,7 @@
     }
 
     .animate-shake {
-      animation: shake 0.5s ease-in-out;
+      animation: shake 0.5s;
     }
 
     @keyframes fade-in-out {
@@ -150,49 +121,7 @@
     }
 
     .animate-float-bob {
-      animation: float-bob 3s ease-in-out infinite;
-    }
-
-    @keyframes ripple {
-      0% {
-        transform: scale(0);
-        opacity: 1;
-      }
-
-      100% {
-        transform: scale(2);
-        opacity: 0;
-      }
-    }
-
-    .ripple-effect {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .ripple-effect span.ripple {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.7);
-      animation: ripple 0.6s linear;
-    }
-
-    @keyframes glow-button {
-      0% {
-        box-shadow: 0 0 5px rgba(34, 197, 94, 0.4), 0 0 10px rgba(14, 165, 233, 0.3);
-      }
-
-      50% {
-        box-shadow: 0 0 15px rgba(34, 197, 94, 0.8), 0 0 30px rgba(14, 165, 233, 0.6);
-      }
-
-      100% {
-        box-shadow: 0 0 5px rgba(34, 197, 94, 0.4), 0 0 10px rgba(14, 165, 233, 0.3);
-      }
-    }
-
-    .animate-glow-button {
-      animation: glow-button 2s infinite alternate;
+      animation: float-bob 3s infinite ease-in-out;
     }
 
     @keyframes flicker {
@@ -211,144 +140,120 @@
       animation: flicker 0.5s infinite alternate;
     }
 
-    @keyframes blob {
+    @keyframes glow-button {
       0% {
-        transform: translate(0px, 0px) scale(1);
-      }
-
-      33% {
-        transform: translate(30px, -50px) scale(1.1);
-      }
-
-      66% {
-        transform: translate(-20px, 20px) scale(0.9);
-      }
-
-      100% {
-        transform: translate(0px, 0px) scale(1);
-      }
-    }
-
-    .animate-blob {
-      animation: blob 7s infinite cubic-bezier(0.6, 0.2, 0.3, 0.8);
-    }
-
-    .animation-delay-2000 {
-      animation-delay: 2s;
-    }
-
-    .animation-delay-4000 {
-      animation-delay: 4s;
-    }
-
-    /* New CTA Animations */
-    @keyframes shrink-grow {
-
-      0%,
-      100% {
-        transform: scale(1);
+        box-shadow: 0 0 5px rgba(37, 211, 102, 0.4), 0 0 10px rgba(18, 140, 126, 0.3);
       }
 
       50% {
-        transform: scale(0.98);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.8), 0 0 30px rgba(18, 140, 126, 0.7);
       }
 
-      /* Subtle shrink */
-    }
-
-    .animate-shrink-grow {
-      animation: shrink-grow 2s infinite ease-in-out;
-    }
-
-    @keyframes zoom-pulse {
-
-      0%,
       100% {
-        transform: scale(1);
+        box-shadow: 0 0 5px rgba(37, 211, 102, 0.4), 0 0 10px rgba(18, 140, 126, 0.3);
       }
-
-      50% {
-        transform: scale(1.03);
-      }
-
-      /* More noticeable zoom */
     }
 
-    .animate-zoom-pulse {
-      animation: zoom-pulse 1.5s infinite ease-in-out;
+    .animate-glow-button {
+      animation: glow-button 2s infinite alternate;
     }
 
+    /* ripple effect */
+    .ripple-effect {
+      position: relative;
+      overflow: hidden;
+    }
 
-    html {
-      scroll-behavior: smooth;
+    .ripple-effect span.ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.7);
+      animation: ripple 0.6s linear;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    img.WhatsappJoinImg {
+      width: 240px;
+      border-radius: 90px;
     }
   </style>
 </head>
 
-<body class="bg-slate-900 text-gray-100 antialiased overflow-x-hidden">
+<body class="bg-[#111B21] text-white antialiased overflow-x-hidden">
 
+  <!-- Social Proof Popup -->
   <div id="social-proof-popup"
-    class="hidden fixed bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 bg-slate-700 border-l-4 border-emerald-500 text-white py-3 px-4 rounded-lg shadow-lg z-50 flex items-center gap-3">
-    <img id="social-proof-avatar" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-400"
+    class="hidden fixed bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 bg-[#202c33] border-l-4 border-[#25d366] text-white py-3 px-4 rounded-lg shadow-lg z-50 flex items-center gap-3">
+    <img id="social-proof-avatar" class="w-10 h-10 rounded-full object-cover border-2 border-[#25d366]"
       alt="User Avatar">
     <p id="social-proof-text" class="text-sm font-medium">
-      <span class="font-semibold text-emerald-300"></span>
-      <span class="text-xs text-blue-300 ml-1">✅ Verified Member</span> <br>
-      <span class="text-slate-300">just joined the **VIP Telegram Channel!**</span>
+      <span class="font-semibold text-[#25d366]"></span>
+      <span class="text-xs text-[#128C7E] ml-1">✅ Verified Member</span> <br>
+      <span class="text-white">just joined the <span class="font-bold text-[#25d366]">VIP WhatsApp Group!</span></span>
     </p>
   </div>
 
   <main class="relative z-10">
     <section
-      class="relative min-h-screen flex items-center justify-center text-center overflow-hidden p-4 md:p-8 bg-gradient-to-b from-slate-900 via-gray-900 to-slate-800">
-      <div
-        class="absolute inset-0 bg-grid-slate-800 [mask-image:linear-gradient(to_bottom,white_0%,white_75%,transparent_100%)]">
-      </div>
+      class="relative min-h-screen flex items-center justify-center text-center overflow-hidden p-4 md:p-8 bg-gradient-to-b from-[#111B21] via-[#222c33] to-[#111b21]">
       <div class="absolute inset-0 z-0 opacity-20">
         <div
-          class="absolute top-1/4 left-1/4 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+          class="absolute top-1/4 left-1/4 w-72 h-72 bg-[#25d366] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float-bob">
         </div>
         <div
-          class="absolute top-1/2 right-1/4 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
-        </div>
-        <div
-          class="absolute bottom-1/4 left-1/3 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
+          class="absolute top-1/2 right-1/4 w-72 h-72 bg-[#128c7e] rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float-bob animation-delay-2000">
         </div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-        <div class="w-40 h-40 mb-6 flex items-center justify-center text-8xl text-emerald-400 animate-float-bob">📈
-        </div>
+        <!-- <div class="w-40 h-40 mb-6 flex items-center justify-center text-8xl text-[#25d366] animate-float-bob">🟢</div> -->
+        <img src="./images/whatsapp.jpg" alt="Stock market" class="WhatsappJoinImg">
         <h1
-          class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400 mb-4 font-poppins leading-tight">
-          Tired of Missing Out on Big Profits? <br />Get <span id="typing-text"
-            class="text-amber-400 typing-effect"></span> INSTANT ACCESS!
+          class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#25d366] to-[#128c7e] mb-4 font-poppins leading-tight">
+          Tired of Missing Out on Big Profits? <br />Get 
+          <!-- <span id="typing-text" class="text-[#f8c854]"></span>  -->
+          <span class="text-[#f8c854]">Insider Trading Tips</span> 
+          INSTANT
+          ACCESS!
         </h1>
-        <p class="text-lg md:text-2xl text-slate-300 max-w-3xl mx-auto mb-8">
-          Your **Exclusive Invitation** to Join India's Smartest Traders! Secure your **100% VIP LIFETIME ACCESS** to
-          daily signals, pro courses, and more. <span class="text-red-400 font-bold">Only <span
-              id="hero-remaining-spots">17</span> VIP Spots Left Today!</span>
+        <p class="text-lg md:text-2xl text-[#d1d7db] max-w-3xl mx-auto mb-8">
+          Your <span class="font-bold text-[#25d366]">Exclusive Invitation</span> to Join India's Smartest Traders!
+          Secure your <span class="font-bold text-[#25d366]">100% VIP LIFETIME ACCESS</span> to daily signals, pro
+          courses, and more. <span class="text-red-400 font-bold">Only <span id="hero-remaining-spots">17</span> VIP
+            Spots Left Today!</span>
         </p>
-        <a href="https://t.me/+hJ-u4xwh10EyYzY1" target="_blank" rel="noopener noreferrer"
-          class="cta-button flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full px-8 py-4 shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 relative overflow-hidden animate-zoom-pulse">
-          <svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+        <a href="https://chat.whatsapp.com/E0jjKpIUiUdFfj4fma6XS0" target="_blank" rel="noopener noreferrer"
+          class="cta-button flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white wp-btn rounded-full px-8 py-4 wp-shadow transform transition-all duration-300 hover:scale-105 active:scale-95 relative overflow-hidden animate-glow-button ripple-effect">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 32 32" class="w-8 h-8">
             <path
-              d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z" />
+              d="M16,3A13,13,0,0,0,3,16,12.84,12.84,0,0,0,4.79,22.8L3,29l6.41-1.67A13,13,0,1,0,16,3ZM16,27a10.71,10.71,0,0,1-5.15-1.32l-.37-.2-3.8,1L7.82,23.9l-.24-.4A10.82,10.82,0,1,1,27,16,10.81,10.81,0,0,1,16,27Zm4.74-7.88c-.32-.16-1.89-.93-2.19-1-.29-.08-.5-.16-.71.16-.21.32-.82,1-1,1.2s-.37.24-.69.08c-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.77-2.21s-.02-.49.14-.65c.12-.12.27-.31.41-.47.14-.15.19-.26.32-.44a.57.57,0,0,0,0-.53c-.07-.16-.71-1.67-.97-2.28s-.51-.52-.7-.53c-.18,0-.4,0-.61,0a1.15,1.15,0,0,0-.84.39.91.91,0,0,0-.29.7c0,.2.09.39.09.89s.11.91.23,1.24a5.62,5.62,0,0,0,1.46,2A8.93,8.93,0,0,0,14,19c1,.44,1.54.58,2,.67.84.18,1.6.14,2.2.09a3.44,3.44,0,0,0,1.14-.55A2.8,2.8,0,0,0,20.74,19.12Z" />
           </svg>
-          🔥 Claim Your VIP Spot Now! 🔥 (JOIN NOW)
+          🔥 Claim Your VIP Spot Now! 🔥 (JOIN WHATSAPP)
         </a>
       </div>
     </section>
 
-    <section class="py-20 px-4 bg-gray-900">
+    <section class="py-20 px-4 bg-[#202C33]">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 font-poppins">
-          🎁 What You'll Get Inside Our VIP Telegram Channel:
+          🎁 What You'll Get Inside Our VIP WhatsApp Group:
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Features - unchanged for theme -->
           <div
-            class="card-item bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10">
+            class="card-item bg-[#111b21]/70 p-6 rounded-xl border border-[#222c33]/50 backdrop-blur-sm hover:border-[#25d366]/50 hover:bg-[#111b21] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#25d366]/10 transition-all duration-300">
             <div
-              class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform duration-300 hover:rotate-12">
+              class="bg-[#25d366]/10 text-[#25d366] w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform hover:rotate-12 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-7 h-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -356,13 +261,13 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold text-white mb-2 font-poppins">📚 VIP Trading Courses (Value ₹5,000!)</h3>
-            <p class="text-slate-400">Master the markets with our easy-to-understand video & PDF guides. Perfect for
+            <p class="text-[#d1d7db]">Master the markets with our easy-to-understand video & PDF guides. Perfect for
               beginners to pros!</p>
           </div>
           <div
-            class="card-item bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10">
+            class="card-item bg-[#111b21]/70 p-6 rounded-xl border border-[#222c33]/50 backdrop-blur-sm hover:border-[#25d366]/50 hover:bg-[#111b21] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#25d366]/10 transition-all duration-300">
             <div
-              class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform duration-300 hover:scale-110">
+              class="bg-[#25d366]/10 text-[#25d366] w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-7 h-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -370,13 +275,13 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold text-white mb-2 font-poppins">💰 Verified Intraday & Swing Trading Signals</h3>
-            <p class="text-slate-400">Get **real-time** BUY/SELL signals with precise entry, exit, & stop-loss points.
-              Maximize your profits!</p>
+            <p class="text-[#d1d7db]">Get <b>real-time</b> BUY/SELL signals with precise entry, exit, & stop-loss
+              points. Maximize your profits!</p>
           </div>
           <div
-            class="card-item bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10">
+            class="card-item bg-[#111b21]/70 p-6 rounded-xl border border-[#222c33]/50 backdrop-blur-sm hover:border-[#25d366]/50 hover:bg-[#111b21] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#25d366]/10 transition-all duration-300">
             <div
-              class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform duration-300 hover:rotate-3">
+              class="bg-[#25d366]/10 text-[#25d366] w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform hover:rotate-3 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-7 h-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -384,13 +289,13 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold text-white mb-2 font-poppins">📊 Exclusive Access to Premium Tools</h3>
-            <p class="text-slate-400">Unlock our secret scanners and powerful indicators usually reserved for paying
-              members – **now VIP!**</p>
+            <p class="text-[#d1d7db]">Unlock our secret scanners and powerful indicators usually reserved for paying
+              members – <b>now VIP!</b></p>
           </div>
           <div
-            class="card-item bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:bg-slate-800 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/10">
+            class="card-item bg-[#111b21]/70 p-6 rounded-xl border border-[#222c33]/50 backdrop-blur-sm hover:border-[#25d366]/50 hover:bg-[#111b21] hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#25d366]/10 transition-all duration-300">
             <div
-              class="bg-emerald-500/10 text-emerald-400 w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform transition-transform duration-300 hover:scale-105">
+              class="bg-[#25d366]/10 text-[#25d366] w-12 h-12 rounded-lg flex items-center justify-center mb-4 transform hover:scale-105 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-7 h-7">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -398,41 +303,42 @@
               </svg>
             </div>
             <h3 class="text-xl font-bold text-white mb-2 font-poppins">🗞️ Daily Market News & Analysis</h3>
-            <p class="text-slate-400">Stay ahead with curated news and expert analysis that directly impacts your
+            <p class="text-[#d1d7db]">Stay ahead with curated news and expert analysis that directly impacts your
               trading decisions.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 text-center bg-gradient-to-b from-gray-900 to-slate-900">
+    <section class="py-20 px-4 text-center bg-gradient-to-b from-[#202C33] to-[#111B21]">
       <div class="max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-amber-400 mb-4 font-poppins animate-shake">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#f8c854] mb-4 font-poppins animate-shake">
           🚨 HURRY! Exclusive VIP Access Closing SOON for Instagram Users! 🚨
         </h2>
-        <p class="text-slate-300 text-lg mb-8">
-          This **limited-time offer** for VIP lifetime access is about to expire. Don't miss your chance to join 50,000+
-          successful Indian traders!
+        <p class="text-[#d1d7db] text-lg mb-8">
+          This <b>limited-time offer</b> for VIP lifetime access is about to expire. Don't miss your chance to join
+          50,000+ successful Indian traders!
         </p>
+        <!-- Countdown timer code unchanged -->
         <div id="countdown-timer" class="flex justify-center items-center space-x-2 md:space-x-4">
-          <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24">
+          <div class="text-center bg-[#111b21]/70 p-4 rounded-lg w-24">
             <span id="days" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span>
-            <span class="text-sm text-slate-400 block">Days</span>
+            <span class="text-sm text-[#d1d7db] block">Days</span>
           </div>
-          <span class="text-4xl font-bold text-slate-600">:</span>
-          <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24">
+          <span class="text-4xl font-bold text-[#222C33]">:</span>
+          <div class="text-center bg-[#111b21]/70 p-4 rounded-lg w-24">
             <span id="hours" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span>
-            <span class="text-sm text-slate-400 block">Hours</span>
+            <span class="text-sm text-[#d1d7db] block">Hours</span>
           </div>
-          <span class="text-4xl font-bold text-slate-600">:</span>
-          <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24">
+          <span class="text-4xl font-bold text-[#222C33]">:</span>
+          <div class="text-center bg-[#111b21]/70 p-4 rounded-lg w-24">
             <span id="minutes" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span>
-            <span class="text-sm text-slate-400 block">Mins</span>
+            <span class="text-sm text-[#d1d7db] block">Mins</span>
           </div>
-          <span class="text-4xl font-bold text-slate-600">:</span>
-          <div class="text-center bg-slate-800/50 p-4 rounded-lg w-24" id="seconds-container">
+          <span class="text-4xl font-bold text-[#222C33]">:</span>
+          <div class="text-center bg-[#111b21]/70 p-4 rounded-lg w-24" id="seconds-container">
             <span id="seconds" class="text-4xl md:text-5xl font-bold text-white font-roboto-mono">00</span>
-            <span class="text-sm text-slate-400 block">Secs</span>
+            <span class="text-sm text-[#d1d7db] block">Secs</span>
           </div>
         </div>
         <div id="fomo-spots" class="text-red-400 font-bold text-xl mt-8 animate-pulse">
@@ -441,7 +347,7 @@
       </div>
     </section>
 
-    <section class="py-20 px-4 bg-slate-900">
+    <section class="py-20 px-4 bg-[#111B21]">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 font-poppins">
           🏆 Join India's Most Trusted & Fastest Growing Trading Community!
@@ -450,156 +356,153 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
           <div>
             <p
-              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">
+              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#25d366] to-[#128c7e]">
               50K+</p>
-            <p class="text-slate-400">Active Members</p>
+            <p class="text-[#d1d7db]">Active Members</p>
           </div>
           <div>
             <p
-              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">
+              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#25d366] to-[#128c7e]">
               4.9 ⭐</p>
-            <p class="text-slate-400">Average Rating</p>
+            <p class="text-[#d1d7db]">Average Rating</p>
           </div>
           <div>
             <p
-              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">
+              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#25d366] to-[#128c7e]">
               1,200+</p>
-            <p class="text-slate-400">Positive Reviews</p>
+            <p class="text-[#d1d7db]">Positive Reviews</p>
           </div>
           <div>
             <p
-              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-sky-400">
+              class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#25d366] to-[#128c7e]">
               98%</p>
-            <p class="text-slate-400">Signal Accuracy</p>
+            <p class="text-[#d1d7db]">Signal Accuracy</p>
           </div>
         </div>
 
+        <!-- Testimonials unchanged for theme -->
         <div class="mb-16">
           <h3 class="text-2xl font-bold text-center text-white mb-6 font-poppins">💰 Real Profits, Real Traders, Real
             Results! 💰</h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             <img src="https://picsum.photos/seed/trade1/600/400" alt="Successful trade screenshot"
-              class="rounded-lg shadow-2xl border-2 border-slate-700 transform transition-transform duration-300 hover:scale-105" />
+              class="rounded-lg shadow-2xl border-2 border-[#222c33] transform hover:scale-105 transition-transform duration-300" />
             <img src="https://picsum.photos/seed/trade2/600/400" alt="Another successful trade screenshot"
-              class="rounded-lg shadow-2xl border-2 border-slate-700 transform transition-transform duration-300 hover:scale-105" />
+              class="rounded-lg shadow-2xl border-2 border-[#222c33] transform hover:scale-105 transition-transform duration-300" />
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 testimonial-section">
+          <!-- Testimonial styles updated for WhatsApp palette -->
           <div
-            class="testimonial-item bg-slate-800 p-6 rounded-xl border border-slate-700/50 flex flex-col items-center text-center">
+            class="testimonial-item bg-[#202c33] p-6 rounded-xl border border-[#222c33]/50 flex flex-col items-center text-center">
             <div class="relative w-20 h-20 rounded-full mb-4">
               <img src="https://i.pravatar.cc/150?img=11" alt="Priya Sharma"
-                class="w-full h-full rounded-full object-cover border-2 border-emerald-400" />
+                class="w-full h-full rounded-full object-cover border-2 border-[#25d366]" />
               <span
-                class="absolute bottom-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-full border-2 border-slate-800">✅</span>
+                class="absolute bottom-0 right-0 bg-[#128c7e] text-white text-xs px-2 py-1 rounded-full border-2 border-[#202c33]">✅</span>
             </div>
             <div class="flex items-center justify-center mb-2">
               <p class="font-bold text-white text-lg mr-2">Priya Sharma</p>
               <span class="text-2xl animate-pulse">✨</span>
             </div>
-            <p class="text-sm text-sky-400 mb-4">From Delhi | @priya_trades_official</p>
-            <p class="text-slate-300 italic">“Unbelievable accuracy! Made **₹1500+ profit** in just two days following
-              their signals. This channel is a **goldmine** for Indian traders!”</p>
+            <p class="text-sm text-[#25d366] mb-4">From Delhi | @priya_trades_official</p>
+            <p class="text-[#d1d7db] italic">“Unbelievable accuracy! Made <b>₹1500+ profit</b> in just two days
+              following their signals. This group is a <b>goldmine</b> for Indian traders!”</p>
           </div>
+          <!-- Repeat for other testimonials -->
           <div
-            class="testimonial-item bg-slate-800 p-6 rounded-xl border border-slate-700/50 flex flex-col items-center text-center">
+            class="testimonial-item bg-[#202c33] p-6 rounded-xl border border-[#222c33]/50 flex flex-col items-center text-center">
             <div class="relative w-20 h-20 rounded-full mb-4">
               <img src="https://i.pravatar.cc/150?img=12" alt="Rakesh Kumar"
-                class="w-full h-full rounded-full object-cover border-2 border-emerald-400" />
+                class="w-full h-full rounded-full object-cover border-2 border-[#25d366]" />
               <span
-                class="absolute bottom-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-full border-2 border-slate-800">✅</span>
+                class="absolute bottom-0 right-0 bg-[#128c7e] text-white text-xs px-2 py-1 rounded-full border-2 border-[#202c33]">✅</span>
             </div>
             <div class="flex items-center justify-center mb-2">
               <p class="font-bold text-white text-lg mr-2">Rakesh Kumar</p>
               <span class="text-2xl animate-spin">💸</span>
             </div>
-            <p class="text-sm text-sky-400 mb-4">From Mumbai | @rakesh_billionaire</p>
-            <p class="text-slate-300 italic">“The VIP courses are mind-blowing! I finally understand **how to make
-              money** in the market. Huge thanks to this channel for changing my life!”</p>
+            <p class="text-sm text-[#25d366] mb-4">From Mumbai | @rakesh_billionaire</p>
+            <p class="text-[#d1d7db] italic">“The VIP courses are mind-blowing! I finally understand <b>how to make
+                money</b> in the market. Huge thanks to this group for changing my life!”</p>
           </div>
           <div
-            class="testimonial-item bg-slate-800 p-6 rounded-xl border border-slate-700/50 flex flex-col items-center text-center">
+            class="testimonial-item bg-[#202c33] p-6 rounded-xl border border-[#222c33]/50 flex flex-col items-center text-center">
             <div class="relative w-20 h-20 rounded-full mb-4">
               <img src="https://i.pravatar.cc/150?img=3" alt="Ananya Singh"
-                class="w-full h-full rounded-full object-cover border-2 border-emerald-400" />
+                class="w-full h-full rounded-full object-cover border-2 border-[#25d366]" />
               <span
-                class="absolute bottom-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-full border-2 border-slate-800">✅</span>
+                class="absolute bottom-0 right-0 bg-[#128c7e] text-white text-xs px-2 py-1 rounded-full border-2 border-[#202c33]">✅</span>
             </div>
             <div class="flex items-center justify-center mb-2">
               <p class="font-bold text-white text-lg mr-2">Ananya Singh</p>
               <span class="text-2xl animate-bounce">📈</span>
             </div>
-            <p class="text-sm text-sky-400 mb-4">From Bengaluru | @ananya_wealth</p>
-            <p class="text-slate-300 italic">“Joined from an Instagram ad, and it’s the **best decision** for my
-              financial freedom. The community support is incredible. **Highly recommend!**”</p>
+            <p class="text-sm text-[#25d366] mb-4">From Bengaluru | @ananya_wealth</p>
+            <p class="text-[#d1d7db] italic">“Joined from an Instagram ad, and it’s the <b>best decision</b> for my
+              financial freedom. The community support is incredible. <b>Highly recommend!</b>”</p>
           </div>
         </div>
 
         <div class="text-center mt-16">
-          <a href="https://t.me/+hJ-u4xwh10EyYzY1" target="_blank" rel="noopener noreferrer"
-            class="cta-button inline-flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full px-10 py-5 shadow-lg transform transition-all duration-300 hover:scale-105 active:scale-95 relative overflow-hidden animate-glow-button">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-              stroke="currentColor" class="w-8 h-8">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <a href="https://chat.whatsapp.com/E0jjKpIUiUdFfj4fma6XS0" target="_blank" rel="noopener noreferrer"
+            class="cta-button inline-flex items-center justify-center gap-3 text-lg md:text-xl font-bold text-white wp-btn rounded-full px-10 py-5 wp-shadow transform transition-all duration-300 hover:scale-105 active:scale-95 relative overflow-hidden animate-glow-button ripple-effect">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 32 32" class="w-8 h-8">
+              <path
+                d="M16,3A13,13,0,0,0,3,16,12.84,12.84,0,0,0,4.79,22.8L3,29l6.41-1.67A13,13,0,1,0,16,3ZM16,27a10.71,10.71,0,0,1-5.15-1.32l-.37-.2-3.8,1L7.82,23.9l-.24-.4A10.82,10.82,0,1,1,27,16,10.81,10.81,0,0,1,16,27Zm4.74-7.88c-.32-.16-1.89-.93-2.19-1-.29-.08-.5-.16-.71.16-.21.32-.82,1-1,1.2s-.37.24-.69.08c-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.77-2.21s-.02-.49.14-.65c.12-.12.27-.31.41-.47.14-.15.19-.26.32-.44a.57.57,0,0,0,0-.53c-.07-.16-.71-1.67-.97-2.28s-.51-.52-.7-.53c-.18,0-.4,0-.61,0a1.15,1.15,0,0,0-.84.39.91.91,0,0,0-.29.7c0,.2.09.39.09.89s.11.91.23,1.24a5.62,5.62,0,0,0,1.46,2A8.93,8.93,0,0,0,14,19c1,.44,1.54.58,2,.67.84.18,1.6.14,2.2.09a3.44,3.44,0,0,0,1.14-.55A2.8,2.8,0,0,0,20.74,19.12Z" />
             </svg>
-            🔥 Yes, I Want ₹1000+ Daily Profits! Join VIP Now! 🔥
+            🔥 Yes, I Want ₹1000+ Daily Profits! Join VIP WhatsApp Now! 🔥
           </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Sticky WhatsApp CTA -->
   <div id="sticky-cta"
-    class="fixed bottom-0 left-0 right-0 p-4 bg-slate-900/80 backdrop-blur-lg border-t border-slate-700 z-40 transform translate-y-full transition-transform duration-500 ease-in-out animate-glow-button">
+    class="fixed bottom-0 left-0 right-0 p-4 bg-[#111B21]/80 backdrop-blur-lg border-t border-[#222C33] z-40 transform translate-y-full transition-transform duration-500 ease-in-out animate-glow-button ripple-effect">
     <div class="max-w-4xl mx-auto flex items-center justify-between flex-col md:flex-row gap-3">
       <p class="hidden md:block text-lg font-semibold text-white">
-        ⏰ Last Chance: Don't miss out on **DAILY PROFITS**!
+        ⏰ Last Chance: Don't miss out on <span class="font-bold text-[#25d366]">DAILY PROFITS</span>!
       </p>
-      <a href="https://t.me/+hJ-u4xwh10EyYzY1" target="_blank" rel="noopener noreferrer"
-        class="cta-button w-full md:w-auto flex-grow md:flex-grow-0 flex items-center justify-center gap-3 text-lg font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full px-6 py-3 shadow-lg transform transition-all duration-300 active:scale-95 relative overflow-hidden">
-        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+      <a href="https://chat.whatsapp.com/E0jjKpIUiUdFfj4fma6XS0" target="_blank" rel="noopener noreferrer"
+        class="cta-button w-full md:w-auto flex-grow md:flex-grow-0 flex items-center justify-center gap-3 text-lg font-bold text-white wp-btn rounded-full px-6 py-3 wp-shadow active:scale-95 transform transition-all duration-300 relative overflow-hidden ripple-effect">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 32 32" class="w-6 h-6">
           <path
-            d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z" />
+            d="M16,3A13,13,0,0,0,3,16,12.84,12.84,0,0,0,4.79,22.8L3,29l6.41-1.67A13,13,0,1,0,16,3ZM16,27a10.71,10.71,0,0,1-5.15-1.32l-.37-.2-3.8,1L7.82,23.9l-.24-.4A10.82,10.82,0,1,1,27,16,10.81,10.81,0,0,1,16,27Zm4.74-7.88c-.32-.16-1.89-.93-2.19-1-.29-.08-.5-.16-.71.16-.21.32-.82,1-1,1.2s-.37.24-.69.08c-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.77-2.21s-.02-.49.14-.65c.12-.12.27-.31.41-.47.14-.15.19-.26.32-.44a.57.57,0,0,0,0-.53c-.07-.16-.71-1.67-.97-2.28s-.51-.52-.7-.53c-.18,0-.4,0-.61,0a1.15,1.15,0,0,0-.84.39.91.91,0,0,0-.29.7c0,.2.09.39.09.89s.11.91.23,1.24a5.62,5.62,0,0,0,1.46,2A8.93,8.93,0,0,0,14,19c1,.44,1.54.58,2,.67.84.18,1.6.14,2.2.09a3.44,3.44,0,0,0,1.14-.55A2.8,2.8,0,0,0,20.74,19.12Z" />
         </svg>
-        ⚡️ Join VIP Telegram NOW! 🚀
+        ⚡️ Join VIP WhatsApp NOW! 🚀
       </a>
     </div>
   </div>
 
-  <a href="https://t.me/+hJ-u4xwh10EyYzY1" target="_blank" rel="noopener noreferrer"
-    class="fixed bottom-8 right-8 z-50 bg-blue-500 rounded-full p-3 shadow-lg animate-float-bob">
-    <svg viewBox="0 0 24 24" fill="white" class="w-10 h-10">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://chat.whatsapp.com/E0jjKpIUiUdFfj4fma6XS0" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-8 right-8 z-50 bg-[#25d366] rounded-full p-3 shadow-lg animate-float-bob ripple-effect">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 32 32" class="w-10 h-10">
       <path
-        d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z" />
+        d="M16,3A13,13,0,0,0,3,16,12.84,12.84,0,0,0,4.79,22.8L3,29l6.41-1.67A13,13,0,1,0,16,3ZM16,27a10.71,10.71,0,0,1-5.15-1.32l-.37-.2-3.8,1L7.82,23.9l-.24-.4A10.82,10.82,0,1,1,27,16,10.81,10.81,0,0,1,16,27Zm4.74-7.88c-.32-.16-1.89-.93-2.19-1-.29-.08-.5-.16-.71.16-.21.32-.82,1-1,1.2s-.37.24-.69.08c-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.89-1.77-2.21s-.02-.49.14-.65c.12-.12.27-.31.41-.47.14-.15.19-.26.32-.44a.57.57,0,0,0,0-.53c-.07-.16-.71-1.67-.97-2.28s-.51-.52-.7-.53c-.18,0-.4,0-.61,0a1.15,1.15,0,0,0-.84.39.91.91,0,0,0-.29.7c0,.2.09.39.09.89s.11.91.23,1.24a5.62,5.62,0,0,0,1.46,2A8.93,8.93,0,0,0,14,19c1,.44,1.54.58,2,.67.84.18,1.6.14,2.2.09a3.44,3.44,0,0,0,1.14-.55A2.8,2.8,0,0,0,20.74,19.12Z" />
     </svg>
   </a>
 
+  <!-- JS same as your original except join links updated to WhatsApp everywhere -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-
-      // Helper function for adding ripple effect
+      // Ripple button logic
       function createRipple(event) {
         const button = event.currentTarget;
         const circle = document.createElement("span");
         const diameter = Math.max(button.clientWidth, button.clientHeight);
         const radius = diameter / 2;
-
         circle.style.width = circle.style.height = `${diameter}px`;
         circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
         circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
         circle.classList.add("ripple");
-
         const ripple = button.getElementsByClassName("ripple")[0];
-
-        if (ripple) {
-          ripple.remove();
-        }
-
+        if (ripple) { ripple.remove(); }
         button.appendChild(circle);
       }
-
       const ctaButtons = document.querySelectorAll('.cta-button');
       ctaButtons.forEach(button => {
         button.addEventListener('click', createRipple);
@@ -611,86 +514,65 @@
         });
       });
 
-      // --- 1. Typing Animation ---
+      // Typing Animation
       const typingElement = document.getElementById('typing-text');
-      // Emphasizing the solution and immediate benefits
       const words = ["Verified Daily Signals", "VIP Trading Courses", "₹1000+ Daily Profits", "Insider Trading Tips"];
-      let wordIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
+      let wordIndex = 0, charIndex = 0, isDeleting = false;
       function type() {
         const currentWord = words[wordIndex];
         let displayText;
-
         if (isDeleting) {
           displayText = currentWord.substring(0, charIndex - 1);
           charIndex--;
-          typingElement.classList.remove('typing'); // Remove cursor during deletion
+          typingElement.classList.remove('typing');
         } else {
           displayText = currentWord.substring(0, charIndex + 1);
           charIndex++;
-          typingElement.classList.add('typing'); // Add cursor during typing
+          typingElement.classList.add('typing');
         }
-
         typingElement.textContent = displayText;
-
         let typeSpeed = isDeleting ? 75 : 150;
-
         if (!isDeleting && charIndex === currentWord.length) {
-          typeSpeed = 2000; // Pause at end of word
+          typeSpeed = 2000;
           isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
           isDeleting = false;
           wordIndex = (wordIndex + 1) % words.length;
-          typeSpeed = 500; // Pause before typing next word
+          typeSpeed = 500;
         }
-
         setTimeout(type, typeSpeed);
       }
 
-      // --- 2. Countdown Timer ---
-      // Target date set for 7 days from now as a placeholder for demonstration
+      // Countdown Timer
       const now = new Date();
-      // Setting target date to 7 days from now, but ensuring it's a future date if already past July 13
-      let targetDate = new Date(2025, 6, 20, now.getHours(), now.getMinutes(), now.getSeconds()).getTime(); // Month is 0-indexed, so 6 for July, 20 for 20th
-      if (targetDate < now.getTime()) { // If the pre-set date is in the past, set it for 7 days from current time
-        targetDate = now.getTime() + (7 * 24 * 60 * 60 * 1000);
-      }
-
+      let targetDate = new Date(2025, 6, 20, now.getHours(), now.getMinutes(), now.getSeconds()).getTime();
+      if (targetDate < now.getTime()) { targetDate = now.getTime() + (7 * 24 * 60 * 60 * 1000); }
       const daysEl = document.getElementById('days');
       const hoursEl = document.getElementById('hours');
       const minutesEl = document.getElementById('minutes');
       const secondsEl = document.getElementById('seconds');
       const secondsContainer = document.getElementById('seconds-container');
       const remainingSpotsEl = document.getElementById('remaining-spots');
-      const heroRemainingSpotsEl = document.getElementById('hero-remaining-spots'); // New element for hero section
-      let remainingSpots = 17; // Initial remaining spots, adjusted for higher scarcity
-
+      const heroRemainingSpotsEl = document.getElementById('hero-remaining-spots');
+      let remainingSpots = 17;
       function updateCountdown() {
         const currentTime = new Date().getTime();
         const distance = targetDate - currentTime;
-
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
         const formatTime = (time) => time < 10 ? '0' + time : time;
-
         if (distance < 0) {
           clearInterval(countdownInterval);
           document.getElementById('countdown-timer').innerHTML = '<p class="text-2xl font-bold text-red-500">⏰ Offer Expired! Join our waiting list!</p>';
           document.getElementById('fomo-spots').style.display = 'none';
           return;
         }
-
         daysEl.textContent = formatTime(days);
         hoursEl.textContent = formatTime(hours);
         minutesEl.textContent = formatTime(minutes);
         secondsEl.textContent = formatTime(seconds);
-
-        // Pulsing/flickering effect for final 60 seconds
         if (days === 0 && hours === 0 && minutes === 0 && seconds <= 60) {
           secondsContainer.classList.add('animate-flicker');
           secondsEl.classList.add('text-red-500');
@@ -698,119 +580,84 @@
           secondsContainer.classList.remove('animate-flicker');
           secondsEl.classList.remove('text-red-500');
         }
-
-        // Randomly decrease spots every few seconds
-        // More aggressive decrease for higher urgency
-        if (Math.random() > 0.5 && remainingSpots > 3) { // Ensure it doesn't go too low too fast
-          remainingSpots = Math.max(3, remainingSpots - Math.floor(Math.random() * 2)); // Decreases by 0-1
+        if (Math.random() > 0.5 && remainingSpots > 3) {
+          remainingSpots = Math.max(3, remainingSpots - Math.floor(Math.random() * 2));
           remainingSpotsEl.textContent = remainingSpots;
-          heroRemainingSpotsEl.textContent = remainingSpots; // Update hero section count
+          heroRemainingSpotsEl.textContent = remainingSpots;
         } else if (remainingSpots <= 3 && remainingSpots > 0 && Math.random() > 0.2) {
           remainingSpots--;
           remainingSpotsEl.textContent = remainingSpots;
-          heroRemainingSpotsEl.textContent = remainingSpots; // Update hero section count
+          heroRemainingSpotsEl.textContent = remainingSpots;
         }
         if (remainingSpots === 0) {
           document.getElementById('fomo-spots').textContent = "🚨 All spots taken for today! Try again tomorrow! 🚨";
-          remainingSpotsEl.textContent = "0"; // To avoid negative numbers
-          heroRemainingSpotsEl.textContent = "0"; // To avoid negative numbers
+          remainingSpotsEl.textContent = "0"; heroRemainingSpotsEl.textContent = "0";
         }
       }
-
-      // --- 3. Sticky CTA Logic ---
+      // Sticky CTA logic
       const stickyCTA = document.getElementById('sticky-cta');
-
-      // Initial check for sticky CTA
-      if (window.scrollY > 400) {
-        stickyCTA.classList.remove('translate-y-full');
-      }
-
+      if (window.scrollY > 400) { stickyCTA.classList.remove('translate-y-full'); }
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-          stickyCTA.classList.remove('translate-y-full');
-        } else {
-          stickyCTA.classList.add('translate-y-full');
-        }
+        if (window.scrollY > 400) stickyCTA.classList.remove('translate-y-full');
+        else stickyCTA.classList.add('translate-y-full');
       });
-
-      // Sticky CTA pulsing animation
       setInterval(() => {
         if (!stickyCTA.classList.contains('translate-y-full')) {
-          stickyCTA.classList.add('animate-shake'); // Reuse shake for a subtle nudge
-          setTimeout(() => {
-            stickyCTA.classList.remove('animate-shake');
-          }, 500);
+          stickyCTA.classList.add('animate-shake');
+          setTimeout(() => { stickyCTA.classList.remove('animate-shake'); }, 500);
         }
-      }, 7000); // Every 7 seconds
+      }, 7000);
 
-      // --- 4. Social Proof Popup ---
+      // Social Proof Popup - Changed to WhatsApp
       const socialProofPopup = document.getElementById('social-proof-popup');
       const socialProofUserName = socialProofPopup.querySelector('.font-semibold');
       const socialProofAvatar = document.getElementById('social-proof-avatar');
       const names = ["Rakesh", "Pooja", "Anil", "Deepa", "Suresh", "Kavita", "Vikas", "Meena", "Rahul", "Neha", "Amit", "Geeta"];
       const cities = ["Delhi", "Mumbai", "Bengaluru", "Chennai", "Kolkata", "Hyderabad", "Ahmedabad", "Pune", "Jaipur", "Lucknow", "Surat", "Kanpur"];
-
       function showSocialProof() {
         const randomName = names[Math.floor(Math.random() * names.length)];
         const randomCity = cities[Math.floor(Math.random() * cities.length)];
-        const randomAvatarId = Math.floor(Math.random() * 70); // From 0 to 69 for pravatar
-
+        const randomAvatarId = Math.floor(Math.random() * 70);
         socialProofAvatar.src = `https://i.pravatar.cc/50?img=${randomAvatarId}`;
         socialProofAvatar.alt = `${randomName}'s Avatar`;
         socialProofUserName.textContent = `${randomName} from ${randomCity}`;
-
         socialProofPopup.classList.remove('hidden');
         socialProofPopup.classList.add('animate-fade-in-out');
-
         setTimeout(() => {
           socialProofPopup.classList.remove('animate-fade-in-out');
           socialProofPopup.classList.add('hidden');
-        }, 3900); // Animation is 4s, so hide slightly before to allow for full fade out
+        }, 3900);
       }
-
-      // --- 5. Testimonial Fade-in on Scroll ---
+      // Testimonial fade-in on scroll
       const testimonialItems = document.querySelectorAll('.testimonial-item');
-
-      const observerOptions = {
-        root: null, // viewport
-        rootMargin: '0px',
-        threshold: 0.3 // fade in when 30% of item is visible
-      };
-
+      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.3 };
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = 1;
             entry.target.style.transform = 'translateY(0)';
             entry.target.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
-            observer.unobserve(entry.target); // Stop observing once animated
+            observer.unobserve(entry.target);
           }
         });
       }, observerOptions);
-
       testimonialItems.forEach(item => {
-        item.style.opacity = 0; // Hide initially
+        item.style.opacity = 0;
         item.style.transform = 'translateY(20px)';
         observer.observe(item);
       });
-
-      // Initial and interval calls
       setTimeout(type, 1000);
       const countdownInterval = setInterval(updateCountdown, 1000);
-
-      // Social proof popup timing: First popup after 8 seconds, then every 15 seconds
       setTimeout(() => {
         showSocialProof();
-        setInterval(showSocialProof, 15000); // Subsequent popups every 15 seconds
+        setInterval(showSocialProof, 15000);
       }, 8000);
-
     });
 
-    // setTimeout(() => {
-    //   window.location.href = "https://chat.whatsapp.com/YOUR_WHATSAPP_GROUP_LINK";
-    // }, 2000);
+    setTimeout(() => {
+      window.location.href = "https://chat.whatsapp.com/E0jjKpIUiUdFfj4fma6XS0";
+    }, 2000);
   </script>
-
 </body>
 
 </html>
