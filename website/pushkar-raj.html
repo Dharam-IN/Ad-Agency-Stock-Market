@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Mahakala Nifty & BankNifty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #000; /* Solid black background */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top, like the screenshot */
+            min-height: 100vh;
+            padding: 1rem 0; /* Some padding top/bottom for mobile scroll */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px; /* Max width similar to a mobile screenshot */
+            background-color: #000; /* Ensure container background is also black */
+            padding: 0 1rem;
+        }
+
+        .header-button,
+        .footer-button {
+            background-color: #22c55e; /* Bright green */
+            color: #000; /* Black text for contrast */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem; /* Slightly rounded corners */
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem; /* Space between icon and text */
+            width: 100%;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            font-size: 1.1rem;
+        }
+
+        .header-button:hover,
+        .footer-button:hover {
+            background-color: #16a34a; /* Darker green on hover */
+            transform: translateY(-1px);
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image-container {
+            border-radius: 50%;
+            border: 4px solid #fff; /* White border as seen in screenshot */
+            padding: 2px;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Subtle glow */
+        }
+
+        .profile-image {
+            width: 160px; /* Slightly larger image */
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .main-message-box {
+            background-color: #1a1a1a; /* Dark gray for the text box */
+            border-radius: 0.5rem;
+            padding: 1.5rem 1rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #22c55e; /* Green accent bar on the left */
+        }
+
+        .main-message-box .title {
+            font-size: 1.3rem; /* Adjusted font size */
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .main-message-box .subtitle {
+            font-size: 0.95rem; /* Slightly smaller subtitle */
+            color: #bbb;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .what-you-get-section {
+            background-color: #000; /* Ensure background is black */
+            padding: 1rem 0 0 0;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .what-you-get-section h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #eee;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start; /* Align text properly */
+            margin-bottom: 1rem;
+            color: #eee;
+            font-size: 0.95rem;
+        }
+
+        .feature-item .icon {
+            color: #22c55e; /* Green icon */
+            font-size: 1.25rem;
+            width: 30px; /* Fixed width for alignment */
+            text-align: center;
+            margin-right: 0.75rem;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+            margin-top: 0.2rem; /* Adjust icon vertical alignment */
+        }
+
+        .powered-by {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        .powered-by img {
+            height: 20px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+
+        .disclaimer {
+            font-size: 0.7rem;
+            color: #999;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown .time-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown .time-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #22c55e; /* Green for numbers */
+            line-height: 1;
+        }
+
+        .countdown .time-label {
+            font-size: 0.75rem;
+            color: #bbb;
+            margin-top: 0.25rem;
+        }
+
+        .countdown .separator {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            align-self: center;
+            margin-top: -0.5rem; /* Adjust vertical position */
+        }
+
+        /* Small device adjustments */
+        @media (max-width: 480px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            .header-button, .footer-button {
+                font-size: 1rem;
+                padding: 0.65rem 0.75rem;
+            }
+            .main-message-box .title {
+                font-size: 1.15rem;
+            }
+            .main-message-box .subtitle, .tagline, .feature-item, .what-you-get-section h2 {
+                font-size: 0.9rem;
+            }
+            .countdown .time-value {
+                font-size: 1.5rem;
+            }
+            .countdown .time-label {
+                font-size: 0.7rem;
+            }
+            .countdown .separator {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                let secondsRemaining = 59; // Starting from 59 seconds for demonstration
+
+                function updateCountdown() {
+                    const minutes = Math.floor(secondsRemaining / 60);
+                    const seconds = secondsRemaining % 60;
+
+                    const minutesStr = String(minutes).padStart(2, '0');
+                    const secondsStr = String(seconds).padStart(2, '0');
+
+                    countdownElement.innerHTML = `
+                        <div class="time-segment">
+                            <span class="time-value">00</span>
+                            <span class="time-label">DAYS</span>
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-segment">
+                            <span class="time-value">00</span>
+                            <span class="time-label">HOURS</span>
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-segment">
+                            <span class="time-value">00</span>
+                            <span class="time-label">MINUTES</span>
+                        </div>
+                        <span class="separator">:</span>
+                        <div class="time-segment">
+                            <span class="time-value">${secondsStr}</span>
+                            <span class="time-label">SECONDS</span>
+                        </div>
+                    `;
+
+                    if (secondsRemaining <= 0) {
+                        secondsRemaining = 59; // Reset or stop, for now reset
+                    } else {
+                        secondsRemaining--;
+                    }
+                }
+
+                setInterval(updateCountdown, 1000);
+                updateCountdown(); // Initial call to display immediately
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="header-button mb-6 mt-4">
+            <i class="fab fa-telegram-plane"></i>
+            <span>JOIN FREE TELEGRAM</span>
+        </a>
+
+        <div class="profile-section">
+            <div class="profile-image-container">
+                <img src="./images/pushkar-raj.png" alt="Profile" class="profile-image" loading="lazy" />
+            </div>
+        </div>
+
+        <div class="main-message-box">
+            <h1 class="title">Get Daily Nifty & BankNifty Insights on Telegram - Free to Join</h1>
+        </div>
+
+        <p class="tagline">
+            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i> No tips, no false promises - just genuine market insights daily.
+        </p>
+
+        <div class="what-you-get-section">
+            <h2 class="mb-4">What You'll Get When You Join?</h2>
+
+            <div class="feature-item">
+                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                <span>Expert-led Nifty & BankNifty insights every day</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon"><i class="fas fa-book-open"></i></span>
+                <span>Educational content crafted for real market learners</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                <span>Delivered via Telegram - instantly & free</span>
+            </div>
+            <div class="feature-item">
+                <span class="icon"><i class="fas fa-search-dollar"></i></span> <span>Learn how to think like a trader, not follow tips</span>
+            </div>
+        </div>
+
+        <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="footer-button mt-6 mb-4">
+            <i class="fab fa-telegram-plane"></i>
+            <span>JOIN FREE TELEGRAM</span>
+        </a>
+
+        <div class="countdown" id="countdown">
+            </div>
+
+    </div>
+
+</body>
+
+</html>
