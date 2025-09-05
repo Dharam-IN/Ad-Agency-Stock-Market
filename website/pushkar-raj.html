@@ -4,334 +4,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shree Mahakala Nifty & BankNifty</title>
+    <title>Join For Best Tips</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            background-color: #000; /* Solid black background */
+            background-color: #000;
             color: white;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align to the top, like the screenshot */
-            min-height: 100vh;
-            padding: 1rem 0; /* Some padding top/bottom for mobile scroll */
+            align-items: center;
+            min-height: 90vh;
+            margin: 0;
+            padding: 20px;
         }
 
         .container {
             width: 100%;
-            max-width: 450px; /* Max width similar to a mobile screenshot */
-            background-color: #000; /* Ensure container background is also black */
-            padding: 0 1rem;
+            max-width: 400px;
+            background-color: #000;
+            text-align: center;
         }
 
-        .header-button,
-        .footer-button {
-            background-color: #22c55e; /* Bright green */
-            color: #000; /* Black text for contrast */
-            padding: 0.75rem 1rem;
-            border-radius: 0.5rem; /* Slightly rounded corners */
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem; /* Space between icon and text */
-            width: 100%;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
-            font-size: 1.1rem;
-        }
-
-        .header-button:hover,
-        .footer-button:hover {
-            background-color: #16a34a; /* Darker green on hover */
-            transform: translateY(-1px);
-        }
-
-        .profile-section {
+        /* Logo and Icon Section */
+        .logo-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 10px;
         }
 
-        .profile-image-container {
+        .logo-icon {
+            width: 180px;
+            height: 180px;
+            background-color: #fff;
             border-radius: 50%;
-            border: 4px solid #fff; /* White border as seen in screenshot */
-            padding: 2px;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Subtle glow */
-        }
-
-        .profile-image {
-            width: 160px; /* Slightly larger image */
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .main-message-box {
-            background-color: #1a1a1a; /* Dark gray for the text box */
-            border-radius: 0.5rem;
-            padding: 1.5rem 1rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid #22c55e; /* Green accent bar on the left */
-        }
-
-        .main-message-box .title {
-            font-size: 1.3rem; /* Adjusted font size */
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        .main-message-box .subtitle {
-            font-size: 0.95rem; /* Slightly smaller subtitle */
-            color: #bbb;
-            font-weight: 500;
+        .bull-icon {
+            width: 45px;
+            height: 45px;
+            background-color: #000;
+            clip-path: polygon(20% 80%, 80% 80%, 90% 40%, 85% 20%, 75% 15%, 60% 25%, 50% 20%, 40% 25%, 25% 15%, 15% 20%, 10% 40%);
         }
 
-        .tagline {
-            font-size: 0.95rem;
-            color: #ccc;
-            margin-top: 1.5rem;
-            padding: 0 1rem;
-            text-align: center;
+        .arrow-up {
+            position: absolute;
+            right: -5px;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 25px solid #22c55e;
+            transform: rotate(45deg);
         }
 
-        .what-you-get-section {
-            background-color: #000; /* Ensure background is black */
-            padding: 1rem 0 0 0;
-            margin-top: 1rem;
-            text-align: left;
+        .green-line {
+            width: 60px;
+            height: 4px;
+            background-color: #22c55e;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            border-radius: 2px;
         }
 
-        .what-you-get-section h2 {
-            font-size: 1.1rem;
+        .brand-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: #fbbf24;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Join Button */
+        .join-button {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 25px;
             font-weight: 700;
-            color: #eee;
-            margin-bottom: 0;
-            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            /* box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3); */
+            width: 280px;
+            max-width: 90%;
+        }
+
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Target Section */
+        .target-section {
+            margin-bottom: 30px;
+        }
+
+        .target-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        /* Features Section */
+        .features-section {
+            margin-bottom: 40px;
         }
 
         .feature-item {
-            display: flex;
-            align-items: flex-start; /* Align text properly */
-            margin-bottom: 1rem;
-            color: #eee;
-            font-size: 0.95rem;
+            font-size: 16px;
+            color: #e5e5e5;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
-        .feature-item .icon {
-            color: #22c55e; /* Green icon */
-            font-size: 1.25rem;
-            width: 30px; /* Fixed width for alignment */
-            text-align: center;
-            margin-right: 0.75rem;
-            flex-shrink: 0; /* Prevent icon from shrinking */
-            margin-top: 0.2rem; /* Adjust icon vertical alignment */
-        }
-
-        .powered-by {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #777;
-        }
-
-        .powered-by img {
-            height: 20px;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
-
-        .disclaimer {
-            font-size: 0.7rem;
-            color: #999;
-            text-align: center;
-            margin-top: 0.5rem;
-        }
-
-        /* Countdown Timer */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            background-color: #1a1a1a;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .countdown .time-segment {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .countdown .time-value {
-            font-size: 1.8rem;
+        /* Bottom Join Button */
+        .bottom-join-button {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 25px;
             font-weight: 700;
-            color: #22c55e; /* Green for numbers */
-            line-height: 1;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            /* box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3); */
+            width: 280px;
+            max-width: 90%;
         }
 
-        .countdown .time-label {
-            font-size: 0.75rem;
-            color: #bbb;
-            margin-top: 0.25rem;
+        .bottom-join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
         }
 
-        .countdown .separator {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #fff;
-            align-self: center;
-            margin-top: -0.5rem; /* Adjust vertical position */
-        }
-
-        /* Small device adjustments */
+        /* Responsive Design */
         @media (max-width: 480px) {
-            .profile-image {
-                width: 120px;
-                height: 120px;
+            .container {
+                max-width: 350px;
+                padding: 0 15px;
             }
-            .header-button, .footer-button {
-                font-size: 1rem;
-                padding: 0.65rem 0.75rem;
+            
+            .bull-icon {
+                width: 40px;
+                height: 40px;
             }
-            .main-message-box .title {
-                font-size: 1.15rem;
+            
+            .brand-name {
+                font-size: 20px;
             }
-            .main-message-box .subtitle, .tagline, .feature-item, .what-you-get-section h2 {
-                font-size: 0.9rem;
+            
+            .join-button, .bottom-join-button {
+                font-size: 16px;
+                padding: 14px 28px;
+                width: 260px;
             }
-            .countdown .time-value {
-                font-size: 1.5rem;
+            
+            .target-title {
+                font-size: 20px;
             }
-            .countdown .time-label {
-                font-size: 0.7rem;
+            
+            .feature-item {
+                font-size: 15px;
             }
-            .countdown .separator {
-                font-size: 1.5rem;
+        }
+
+        @media (max-width: 360px) {
+            .join-button, .bottom-join-button {
+                width: 240px;
+                font-size: 15px;
+                padding: 12px 24px;
+            }
+            
+            .target-title {
+                font-size: 18px;
             }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const countdownElement = document.getElementById('countdown');
-            if (countdownElement) {
-                let secondsRemaining = 59; // Starting from 59 seconds for demonstration
-
-                function updateCountdown() {
-                    const minutes = Math.floor(secondsRemaining / 60);
-                    const seconds = secondsRemaining % 60;
-
-                    const minutesStr = String(minutes).padStart(2, '0');
-                    const secondsStr = String(seconds).padStart(2, '0');
-
-                    countdownElement.innerHTML = `
-                        <div class="time-segment">
-                            <span class="time-value">00</span>
-                            <span class="time-label">DAYS</span>
-                        </div>
-                        <span class="separator">:</span>
-                        <div class="time-segment">
-                            <span class="time-value">00</span>
-                            <span class="time-label">HOURS</span>
-                        </div>
-                        <span class="separator">:</span>
-                        <div class="time-segment">
-                            <span class="time-value">00</span>
-                            <span class="time-label">MINUTES</span>
-                        </div>
-                        <span class="separator">:</span>
-                        <div class="time-segment">
-                            <span class="time-value">${secondsStr}</span>
-                            <span class="time-label">SECONDS</span>
-                        </div>
-                    `;
-
-                    if (secondsRemaining <= 0) {
-                        secondsRemaining = 59; // Reset or stop, for now reset
-                    } else {
-                        secondsRemaining--;
-                    }
-                }
-
-                setInterval(updateCountdown, 1000);
-                updateCountdown(); // Initial call to display immediately
-            }
-        });
-    </script>
 </head>
 
 <body>
-
     <div class="container">
-
-        <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="header-button mb-6 mt-4">
-            <i class="fab fa-telegram-plane"></i>
-            <span>JOIN FREE TELEGRAM</span>
-        </a>
-
-        <div class="profile-section">
-            <div class="profile-image-container">
-                <img src="./images/pushkar-raj.png" alt="Profile" class="profile-image" loading="lazy" />
+    <!-- Logo Section -->
+    <div class="logo-section">
+        <div class="logo-icon">
+            <div>
+                <img src="./images/bull-growth.png" alt="Growth">
             </div>
         </div>
-
-        <div class="main-message-box">
-            <h1 class="title">Get Daily Nifty & BankNifty Insights on Telegram - Free to Join</h1>
-        </div>
-
-        <p class="tagline">
-            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i> No tips, no false promises - just genuine market insights daily.
-        </p>
-
-        <div class="what-you-get-section">
-            <h2 class="mb-4">What You'll Get When You Join?</h2>
-
-            <div class="feature-item">
-                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span>Expert-led Nifty & BankNifty insights every day</span>
-            </div>
-            <div class="feature-item">
-                <span class="icon"><i class="fas fa-book-open"></i></span>
-                <span>Educational content crafted for real market learners</span>
-            </div>
-            <div class="feature-item">
-                <span class="icon"><i class="fas fa-paper-plane"></i></span>
-                <span>Delivered via Telegram - instantly & free</span>
-            </div>
-            <div class="feature-item">
-                <span class="icon"><i class="fas fa-search-dollar"></i></span> <span>Learn how to think like a trader, not follow tips</span>
-            </div>
-        </div>
-
-        <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="footer-button mt-6 mb-4">
-            <i class="fab fa-telegram-plane"></i>
-            <span>JOIN FREE TELEGRAM</span>
-        </a>
-
-        <div class="countdown" id="countdown">
-            </div>
-
+        <div class="brand-name">Pushkar Trading Signals</div>
     </div>
+
+    <!-- First Join Button -->
+    <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="join-button">
+        Join Our Channel
+    </a>
+
+    <!-- Target Section -->
+    <div class="target-section">
+        <h1 class="target-title">15-20 Point SL • 100+ Point Target</h1>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="feature-item">✅ Daily live market analysis with expert traders</div>
+        <div class="feature-item">💡 Free mentorship and risk management guidance</div>
+        <div class="feature-item">📚 Educational content for skill development</div>
+        <div class="feature-item">⚡ Instant alerts via Telegram notifications</div>
+    </div>
+
+    <!-- Bottom Join Button -->
+    <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="bottom-join-button">
+        Start Trading Profitably
+    </a>
+</div>
 
 </body>
 
