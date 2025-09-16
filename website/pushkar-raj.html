@@ -1,263 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join For Best Tips</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>BANKNIFTY LEARNING CHANNEL</title>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #000;
-            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 90vh;
-            margin: 0;
-            padding: 20px;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 50px;
         }
-
         .container {
             width: 100%;
-            max-width: 400px;
-            background-color: #000;
+            max-width: 600px;
             text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
         }
-
-        /* Logo and Icon Section */
-        .logo-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .main-heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+        .sub-heading {
+            font-size: 18px;
+            color: #555;
+            margin-top: 5px;
             margin-bottom: 10px;
         }
-
-        .logo-icon {
-            width: 180px;
-            height: 180px;
-            background-color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .bull-icon {
-            width: 45px;
-            height: 45px;
-            background-color: #000;
-            clip-path: polygon(20% 80%, 80% 80%, 90% 40%, 85% 20%, 75% 15%, 60% 25%, 50% 20%, 40% 25%, 25% 15%, 15% 20%, 10% 40%);
-        }
-
-        .arrow-up {
-            position: absolute;
-            right: -5px;
-            top: 15px;
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-bottom: 25px solid #22c55e;
-            transform: rotate(45deg);
-        }
-
-        .green-line {
-            width: 60px;
-            height: 4px;
-            background-color: #22c55e;
-            position: absolute;
-            bottom: 20px;
-            right: 10px;
-            border-radius: 2px;
-        }
-
-        .brand-name {
-            font-size: 24px;
-            font-weight: 800;
-            color: #fbbf24;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        /* Join Button */
-        .join-button {
-            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 40px;
-            transition: all 0.3s ease;
-            /* box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3); */
-            width: 280px;
-            max-width: 90%;
-        }
-
-        .join-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
-        }
-
-        /* Target Section */
-        .target-section {
-            margin-bottom: 30px;
-        }
-
-        .target-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 25px;
-            line-height: 1.2;
-        }
-
-        /* Features Section */
-        .features-section {
-            margin-bottom: 40px;
-        }
-
-        .feature-item {
+        .member-count {
             font-size: 16px;
-            color: #e5e5e5;
-            margin-bottom: 8px;
-            font-weight: 500;
+            color: #666;
+            margin-bottom: 20px;
         }
-
-        /* Bottom Join Button */
-        .bottom-join-button {
-            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 18px;
-            text-decoration: none;
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            text-align: left;
             display: inline-block;
-            transition: all 0.3s ease;
-            /* box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3); */
-            width: 280px;
-            max-width: 90%;
         }
-
-        .bottom-join-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+        .feature-list li {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 10px;
         }
-
-        /* Responsive Design */
-        @media (max-width: 480px) {
-            .container {
-                max-width: 350px;
-                padding: 0 15px;
-            }
-
-            .bull-icon {
-                width: 40px;
-                height: 40px;
-            }
-
-            .brand-name {
-                font-size: 20px;
-            }
-
-            .join-button,
-            .bottom-join-button {
-                font-size: 16px;
-                padding: 14px 28px;
-                width: 260px;
-            }
-
-            .target-title {
-                font-size: 20px;
-            }
-
-            .feature-item {
-                font-size: 15px;
-            }
+        .hurry-up {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d9534f;
+            margin-bottom: 10px;
         }
-
-        @media (max-width: 360px) {
-
-            .join-button,
-            .bottom-join-button {
-                width: 240px;
-                font-size: 15px;
-                padding: 12px 24px;
-            }
-
-            .target-title {
-                font-size: 18px;
-            }
+        .timer {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .join-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .telegram-link {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #777;
+            text-align: left;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            margin-top: 20px;
         }
     </style>
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2655073818020181');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=2655073818020181&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
-
 <body>
     <div class="container">
-        <!-- Logo Section -->
-        <div class="logo-section">
-            <div class="logo-icon">
-                <div>
-                    <img src="./images/bull-growth.png" alt="Growth">
-                </div>
-            </div>
-            <div class="brand-name">Pushkar Trading Signals</div>
-        </div>
-
-        <!-- First Join Button -->
+                
+        <h1 class="main-heading">BANKNIFTY LEARNING CHANNEL</h1>
+        <h2 class="sub-heading">Dedicated to Learning, Awareness & Smarter Finance</h2>
+        <p class="member-count">Join 16,000+ learners who are shaping their financial journey 🚀</p>
+        
+        <ul class="feature-list">
+            <li>✅ Learn how markets function in a simple & practical way</li>
+            <li>✅ Discover strategies to read and follow market trends</li>
+            <li>✅ Unlock resources to keep improving every single day</li>
+        </ul>
+        
+        <p class="hurry-up">00 Min 01 Sec ⏳ Hurry Up!</p>
+        
         <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="join-button">
-            Join Our Channel
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white" style="vertical-align: middle; margin-right: 8px;">
+                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-1.37.2-1.64l16.4-6.2c.75-.29 1.4.22 1.2.98l-3.5 15.15c-.24.83-1.04 1.05-1.7.63l-4.52-3.32-2.13 2.05c-.23.23-.42.42-.83.42z"/>
+            </svg>
+            Join Free Learning Group
         </a>
-
-        <!-- Target Section -->
-        <div class="target-section">
-            <h1 class="target-title">15-20 Point SL • 100+ Point Target</h1>
+        
+        <p class="telegram-link">If you use Telegram, you can <a href="https://t.me/+eTj_iDvhmq5lNjc1">Join Our Group Instantly</a> ✨</p>
+        
+        <div class="disclaimer">
+            <p>Disclaimer: We are not SEBI registered advisors. All information shared is for educational purposes only and should not be considered as financial advice. Trading and investments in the stock market are inherently subject to risks. Please consult your financial advisor before making any investment decisions.</p>
+            <p>Investments in securities market are subject to market risks, read all the related documents carefully before investing.</p>
         </div>
-
-        <!-- Features Section -->
-        <div class="features-section">
-            <div class="feature-item">✅ Daily live market analysis with expert traders</div>
-            <div class="feature-item">💡 Free mentorship and risk management guidance</div>
-            <div class="feature-item">📚 Educational content for skill development</div>
-            <div class="feature-item">⚡ Instant alerts via Telegram notifications</div>
-        </div>
-
-        <!-- Bottom Join Button -->
-        <a href="https://t.me/+eTj_iDvhmq5lNjc1" class="bottom-join-button">
-            Join Our Channel
-        </a>
     </div>
-
 </body>
-
 </html>
