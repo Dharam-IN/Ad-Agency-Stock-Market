@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PANKAJ BHARDWAJ | Indian Trader</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 15px;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Header bar */
+    .header-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #d90429;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 14px 10px;
+      letter-spacing: 2px;
+      z-index: 10;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgb(217 4 41 / 0.7);
+    }
+
+    /* Container */
+    .container {
+      max-width: 420px;
+      width: 100%;
+      margin: 130px auto 40px auto;
+      background: #111;
+      padding: 40px 30px 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(217, 4, 41, 0.8);
+      text-align: center;
+      border: 2px solid #d90429;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 12px 36px rgba(255, 195, 0, 0.9);
+    }
+
+    /* Profile Image */
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: -110px auto 25px auto;
+      box-shadow: 0 8px 20px 0 #d904292e;
+      border: 6px solid #ffc300;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px 0 #ffc300bb;
+    }
+
+    /* Name */
+    .name {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: #ffc300;
+      letter-spacing: 3px;
+      margin: 0 0 6px 0;
+      line-height: 1.1em;
+      text-shadow: 0 0 8px #d98208;
+      user-select: none;
+    }
+
+    /* Subtitle */
+    .subtitle {
+      color: #d90429;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-top: 0;
+      margin-bottom: 28px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    /* Features */
+    .features {
+      margin: 0 auto 36px auto;
+      max-width: 320px;
+      text-align: left;
+      color: #eee;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.5em;
+      user-select: none;
+    }
+
+    .features .icon {
+      color: #ffc300;
+      font-size: 1.3rem;
+      margin-right: 8px;
+      vertical-align: middle;
+      user-select: none;
+    }
+
+    .features span {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      user-select: text;
+    }
+
+    .features span:last-child {
+      border-bottom: none;
+    }
+
+    .features span .highlight {
+      color: #ff2222;
+      margin-left: 6px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      user-select: text;
+    }
+
+    /* Join Button */
+    .join-btn {
+  background: #d90429;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 38px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1.2px;
+  user-select: none;
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.6);
+  transition: background 0.25s ease, transform 0.15s ease;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.join-btn span.subtext {
+  display: none; /* Hide the smaller subtext */
+}
+
+.join-btn:hover,
+.join-btn:focus {
+  background: #ff3a49;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 58, 73, 0.8);
+  outline: none;
+}
+
+
+    /* Countdown */
+    .countdown-container {
+      margin: 40px auto 0 auto;
+      color: #ff2222;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      font-family: 'Courier New', Courier, monospace;
+      user-select: none;
+      max-width: 320px;
+    }
+
+    /* Powered by */
+    .powered-by {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #90caf9;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .powered-by span {
+      color: #2196f3;
+      font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .header-bar {
+        font-size: 1rem;
+        padding: 12px 6px;
+        letter-spacing: 1.5px;
+      }
+
+      .container {
+        margin: 100px 12px 30px 12px;
+        padding: 32px 20px 32px 20px;
+        border-radius: 14px;
+        max-width: 100%;
+      }
+
+      .profile-img {
+        width: 130px;
+        height: 130px;
+        margin: -90px auto 22px auto;
+        border-width: 5px;
+      }
+
+      .name {
+        font-size: 2.2rem;
+        letter-spacing: 1.8px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 20px;
+      }
+
+      .features {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+
+      .join-btn {
+        font-size: 1.15rem;
+        padding: 16px 32px;
+        gap: 8px;
+      }
+
+      .countdown-container {
+        font-size: 1.2rem;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-bar">
+    NO.1 TRADER IN TELEGRAM
+  </div>
+  <div class="container">
+    <div class="profile-img">
+      <img src="./images/MEHTABHAIANALYTICS.png" alt="Pankaj Bhardwaj" />
+    </div>
+    <div class="name">MEHTA BHAI ANALYTICS</div>
+    <div class="subtitle">THE BEST INDIAN TRADER</div>
+    <a href="https://t.me/PUT_YOUR_CHANNEL_LINK_HERE" class="join-btn" role="button" aria-label="Join free Telegram channel">
+      JOIN NOW <span class="url-icon">&#x1F517;</span><br>
+      <span class="subtext">FREE TELEGRAM CHANNEL</span>
+    </a>
+    <div class="features">
+      <span><span class="icon" aria-hidden="true">🏅</span>FULL SUPPORT AND GUIDANCE <span class="icon"
+          aria-hidden="true">🏅</span></span>
+      <span><span class="icon" aria-hidden="true">💡</span>EXPERT TIPS &amp; STRATEGIES<span class="icon"
+          aria-hidden="true">💡</span></span>
+      <span><span class="icon" aria-hidden="true">🤝</span>DAILY FREE SIGNALS <span class="highlight">💯%</span></span>
+    </div>
+  </div>
+
+  <script>
+    // Simple countdown for seconds
+    let seconds = 15;
+    setInterval(() => {
+      if (seconds > 0) {
+        seconds--;
+        document.getElementById('sec').textContent = String(seconds).padStart(2, '0');
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
