@@ -4,133 +4,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PANKAJ BHARDWAJ | Indian Trader</title>
+  <title>MEHTA BHAI ANALYTICS | Indian Trader</title>
   <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
-      background: #000;
+      background: #16181a;
       color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 20px 15px;
-      line-height: 1.4;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Header bar */
+    /* Header bar using Telegram blue */
     .header-bar {
       position: fixed;
-      top: 0;
       left: 0;
+      top: 0;
       width: 100%;
-      background: #d90429;
+      background: #0088cc;
       color: #fff;
-      font-size: 1.2rem;
-      font-weight: 700;
+      padding: 13px 0;
+      font-size: 1.22rem;
+      font-weight: bold;
       text-align: center;
-      padding: 14px 10px;
-      letter-spacing: 2px;
-      z-index: 10;
       text-transform: uppercase;
-      box-shadow: 0 2px 8px rgb(217 4 41 / 0.7);
+      letter-spacing: 2px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 136, 204, 0.15);
     }
 
-    /* Container */
     .container {
       max-width: 420px;
       width: 100%;
-      margin: 130px auto 40px auto;
-      background: #111;
-      padding: 40px 30px 40px 30px;
+      margin: 98px auto 60px auto;
+      background: #23272a;
       border-radius: 16px;
-      box-shadow: 0 8px 28px rgba(217, 4, 41, 0.8);
+      box-shadow: 0 7px 32px rgba(0, 136, 204, .25);
       text-align: center;
-      border: 2px solid #d90429;
-      transition: box-shadow 0.3s ease;
+      border: 1.5px solid #0088cc;
+      padding: 58px 24px 36px 24px;
     }
 
-    .container:hover {
-      box-shadow: 0 12px 36px rgba(255, 195, 0, 0.9);
-    }
-
-    /* Profile Image */
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       overflow: hidden;
-      margin: -110px auto 25px auto;
-      box-shadow: 0 8px 20px 0 #d904292e;
-      border: 6px solid #ffc300;
+      margin: -92px auto 15px auto;
+      box-shadow: 0 4px 16px 0 #0088cc55;
+      border: 6px solid #40b3e0;
       background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.3s ease;
     }
 
     .profile-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
       border-radius: 50%;
     }
 
-    .profile-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 30px 0 #ffc300bb;
-    }
-
-    /* Name */
     .name {
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: #ffc300;
-      letter-spacing: 3px;
-      margin: 0 0 6px 0;
-      line-height: 1.1em;
-      text-shadow: 0 0 8px #d98208;
+      font-size: 2.3rem;
+      font-weight: bold;
+      color: #40b3e0;
+      letter-spacing: 2.2px;
+      margin-bottom: 7px;
+      margin-top: 0;
+      text-shadow: 0 0 10px #0088cc55;
       user-select: none;
     }
 
-    /* Subtitle */
     .subtitle {
-      color: #d90429;
+      color: #0088cc;
       font-weight: 700;
-      font-size: 1.15rem;
-      margin-top: 0;
-      margin-bottom: 28px;
-      letter-spacing: 1.8px;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       user-select: none;
     }
 
-    /* Features */
     .features {
-      margin: 0 auto 36px auto;
+      margin: 0 auto 28px auto;
       max-width: 320px;
       text-align: left;
       color: #eee;
-      font-size: 1.1rem;
+      font-size: 1.07rem;
       font-weight: 600;
       line-height: 1.5em;
       user-select: none;
     }
 
     .features .icon {
-      color: #ffc300;
-      font-size: 1.3rem;
+      color: #ffd700;
+      font-size: 1.35rem;
       margin-right: 8px;
       vertical-align: middle;
       user-select: none;
@@ -148,123 +121,133 @@
       border-bottom: none;
     }
 
-    .features span .highlight {
-      color: #ff2222;
+    .features .highlight {
+      color: #00e676;
       margin-left: 6px;
-      font-weight: 800;
-      font-size: 1.15rem;
+      font-weight: bold;
+      font-size: 1.13rem;
       user-select: text;
     }
 
-    /* Join Button */
     .join-btn {
-  background: #d90429;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 38px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 1.2px;
-  user-select: none;
-  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.6);
-  transition: background 0.25s ease, transform 0.15s ease;
-  flex-direction: row;
-  margin-bottom: 10px;
-}
+      background: #0088cc;
+      color: #fff;
+      font-size: 1.18rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      padding: 13px 37px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      letter-spacing: 1.2px;
+      user-select: none;
+      box-shadow: 0 4px 15px rgba(0, 136, 204, .25);
+      margin: 10px auto 30px auto;
+      transition: background 0.22s, transform .15s;
+    }
 
-.join-btn span.subtext {
-  display: none; /* Hide the smaller subtext */
-}
+    .join-btn:hover {
+      background: #40b3e0;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 16px #40b3e077;
+    }
 
-.join-btn:hover,
-.join-btn:focus {
-  background: #ff3a49;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 58, 73, 0.8);
-  outline: none;
-}
+    .telegram-svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+      margin-right: 4px;
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
+    .join-btn .btn-text {
+      font-size: 16.02px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-    /* Countdown */
+    .join-btn .subtext {
+      display: none;
+    }
+
     .countdown-container {
       margin: 40px auto 0 auto;
-      color: #ff2222;
-      font-size: 1.4rem;
+      color: #00e676;
+      font-size: 1.25rem;
       font-weight: 800;
-      letter-spacing: 2px;
+      letter-spacing: 1.2px;
       font-family: 'Courier New', Courier, monospace;
       user-select: none;
       max-width: 320px;
     }
 
-    /* Powered by */
     .powered-by {
-      margin-top: 28px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #90caf9;
-      font-weight: 600;
-      user-select: none;
+      margin-top: 23px;
+      text-align: right;
+      font-size: .98rem;
+      color: #b0e4fc;
     }
 
     .powered-by span {
-      color: #2196f3;
+      color: #0088cc;
       font-weight: 700;
     }
 
-    /* Responsive */
     @media (max-width: 500px) {
       .header-bar {
-        font-size: 1rem;
-        padding: 12px 6px;
-        letter-spacing: 1.5px;
+        font-size: .99rem;
+        padding: 12px 4px;
+        letter-spacing: .9px;
       }
 
       .container {
-        margin: 100px 12px 30px 12px;
-        padding: 32px 20px 32px 20px;
-        border-radius: 14px;
-        max-width: 100%;
+        margin: 110px 5px 36px 5px;
+        padding: 22px 7px 22px 7px;
+        border-radius: 13px;
+        max-width: 100vw;
       }
 
       .profile-img {
-        width: 130px;
-        height: 130px;
-        margin: -90px auto 22px auto;
-        border-width: 5px;
+        width: 105px;
+        height: 105px;
+        margin: -64px auto 15px auto;
+        border-width: 4px;
       }
 
       .name {
-        font-size: 2.2rem;
-        letter-spacing: 1.8px;
+        font-size: 1.45rem;
+        letter-spacing: 1px;
       }
 
       .subtitle {
-        font-size: 1rem;
-        letter-spacing: 1.2px;
-        margin-bottom: 20px;
+        font-size: .95rem;
+        letter-spacing: .7px;
+        margin-bottom: 17px;
       }
 
       .features {
-        font-size: 1rem;
-        max-width: 100%;
+        font-size: .95rem;
+        max-width: 99vw;
       }
 
       .join-btn {
-        font-size: 1.15rem;
-        padding: 16px 32px;
-        gap: 8px;
+        font-size: 1.03rem;
+        padding: 12px 11px;
+        gap: 7px;
       }
 
       .countdown-container {
-        font-size: 1.2rem;
-        max-width: 100%;
+        font-size: 1.14rem;
+        max-width: 99vw;
+      }
+
+      .powered-by {
+        font-size: .89rem;
       }
     }
   </style>
@@ -276,13 +259,19 @@
   </div>
   <div class="container">
     <div class="profile-img">
-      <img src="./images/MEHTABHAIANALYTICS.png" alt="Pankaj Bhardwaj" />
+      <img src="./images/MEHTABHAIANALYTICS.png" alt="Mehta Bhai Analytics">
     </div>
     <div class="name">MEHTA BHAI ANALYTICS</div>
     <div class="subtitle">THE BEST INDIAN TRADER</div>
-    <a href="https://t.me/PUT_YOUR_CHANNEL_LINK_HERE" class="join-btn" role="button" aria-label="Join free Telegram channel">
-      JOIN NOW <span class="url-icon">&#x1F517;</span><br>
-      <span class="subtext">FREE TELEGRAM CHANNEL</span>
+    <a href="https://t.me/PUT_YOUR_CHANNEL_LINK_HERE" class="join-btn" role="button"
+      aria-label="Join free Telegram channel">
+      <!-- Telegram SVG Icon -->
+      <svg class="telegram-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>Telegram</title>
+        <path
+          d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.56-1.1.56-.72 0-.6-.27-.84-.95L6.3 13.7l-5.45-1.7c-1.18-.35-1.19-1.16.26-1.75l21.26-8.2c.97-.43 1.9.24 1.53 1.73z" />
+      </svg>
+      <span class="btn-text">JOIN FREE TELEGRAM CHANNEL</span>
     </a>
     <div class="features">
       <span><span class="icon" aria-hidden="true">🏅</span>FULL SUPPORT AND GUIDANCE <span class="icon"
@@ -292,7 +281,6 @@
       <span><span class="icon" aria-hidden="true">🤝</span>DAILY FREE SIGNALS <span class="highlight">💯%</span></span>
     </div>
   </div>
-
   <script>
     // Simple countdown for seconds
     let seconds = 15;
